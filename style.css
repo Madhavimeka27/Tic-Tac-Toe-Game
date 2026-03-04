@@ -1,0 +1,87 @@
+:root {
+  --bg-dark: #0f172a;
+  --bg-light: #f8fafc;
+  --box-dark: #1e293b;
+  --box-light: #e5e7eb;
+  --text-dark: #ffffff;
+  --text-light: #0f172a;
+  --x: #f43f5e;
+  --o: #38bdf8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+body.dark {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+body.light {
+  background: var(--bg-light);
+  color: var(--text-light);
+}
+
+main {
+  text-align: center;
+}
+
+.status {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+#theme-btn, #reset-btn {
+  margin: 8px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.game {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  width: 60vmin;
+  height: 60vmin;
+  margin: 20px auto;
+}
+
+.box {
+  border: none;
+  border-radius: 15px;
+  font-size: 10vmin;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+body.dark .box {
+  background: var(--box-dark);
+  box-shadow: 0 8px 0 #000;
+  color: white;
+}
+
+body.light .box {
+  background: var(--box-light);
+  box-shadow: 0 6px 0 #999;
+  color: black;
+}
+
+.x-color { color: var(--x); }
+.o-color { color: var(--o); }
